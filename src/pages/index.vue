@@ -1,11 +1,7 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
-      fixed
-      v-model="drawer"
-      app
-      >
-      <v-list dense>
+    <v-navigation-drawer v-model="sideNav" absolute>
+      <v-list>
         <v-list-tile>
           <v-list-tile-action>
             <v-icon>home</v-icon>
@@ -24,35 +20,31 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar dark class="primary">
+      <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn flat>
+          <v-icon left dark>home</v-icon>
+          Home
+        </v-btn>
+        <v-btn flat>
+          <v-icon left dark>contact_mail</v-icon>
+          Contact
+        </v-btn>
+      </v-toolbar-items>
     </v-toolbar>
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout
-          justify-center
-          align-center
-          >
-          <v-tooltip right>
-            <v-btn icon large :href="source" target="_blank" slot="activator">
-              <v-icon large>code</v-icon>
-            </v-btn>
-            <span>Source</span>
-          </v-tooltip>
-        </v-layout>
-      </v-container>
-    </v-content>
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2017</span>
-    </v-footer>
+    <main>
+      test
+    </main>
   </v-app>
 </template>
 
 <script>
 export default {
   data: () => ({
-    drawer: null
+    sideNav: null
   }),
 
   props: {
@@ -60,3 +52,9 @@ export default {
   }
 }
 </script>
+<style>
+main {
+  height: 100%;
+  min-height: 100%;
+}
+</style>
