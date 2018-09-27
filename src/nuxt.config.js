@@ -1,3 +1,7 @@
+// use process to check 'env.DEV' as we don't need to use Firebase Cloud Functions and Firebase Hosting while development.
+// When we use other Firebase services this may not work. Because code base is relying on Firebase.
+const process = require("process")
+
 module.exports = {
   /*
   ** Headers of the page
@@ -20,9 +24,9 @@ module.exports = {
   /*
   ** Build configuration
   */
-  buildDir: '../functions/nuxt',
+  buildDir: process.env.DEV ? '.nuxt' : '../functions/nuxt',
   build: {
-    publicPath: '/',
+    publicPath: process.env.DEV ? '/public/' : '/',
     vendor: ['axios', 'babel-polyfill'],
     extractCSS: true,
     babel: {
