@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "SSR + serverless quick deploy with Nuxt.js + Firebase",
+  "scripts": {
+    "clean": "mkdir -p public && rm -rf public/*",
+    "cp:static": "cp -R functions/nuxt/dist/ public && cp -R src/static/* public",
+    "setup": "yarn clean && yarn cp:static",
+    "serve": "yarn setup && sudo firebase serve --only hosting,functions",
+    "deploy": "yarn setup && firebase deploy"
+  },
+  "keywords": [
+    "nuxt.js",
+    "firebase"
+  ],
+  "author": "Wataru Oguchi <wataru.oguchi.0to1@gmail.com> (https://wataruoguchi.com)",
+  "license": "ISC"
+}
+
