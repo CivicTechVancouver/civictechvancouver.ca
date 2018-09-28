@@ -1,6 +1,6 @@
 <template>
   <div>
-    Index
+    Get Involved
   </div>
 </template>
 

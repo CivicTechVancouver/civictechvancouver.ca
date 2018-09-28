@@ -1,6 +1,6 @@
 <template>
   <div>
-    Index
+    Projects
   </div>
 </template>
 

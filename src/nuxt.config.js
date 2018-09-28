@@ -20,6 +20,17 @@ module.exports = {
   modules: [
     '@nuxtjs/vuetify'
   ],
+  vuetify: {
+    theme: {
+      primary: "#212121",
+      secondary: "#000000",
+      accent: "#FFEA00",
+      error: "#f44336",
+      warning: "#ffeb3b",
+      info: "#2196f3",
+      success: "#4caf50"
+    }
+  },
   /*
   ** Build configuration
   */
