@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="sideNav" fixed app>
+    <v-navigation-drawer v-model="sideNav" dark app right disable-resize-watcher disable-route-watcher width="250">
       <v-list>
         <v-list-tile v-for="(item, itemIdx) in menuItems" :key="itemIdx">
           <v-list-tile-action>
@@ -12,11 +12,19 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar dark class="primary" app>
+    <v-toolbar class="primary" dark scroll-off-screen>
       <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>
+        <v-icon left dark>code</v-icon>
+        <span class="hidden-md-and-up">
+          <small class="pl-2">{{ title }}</small>
+        </span>
+        <span class="hidden-sm-and-down">
+          {{ title }}
+        </span>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat v-for="(item, itemIdx) in menuItems" :key="itemIdx">
           <v-icon left dark>{{ item.icon }}</v-icon>
           {{ item.label }}
@@ -29,6 +37,9 @@
 <script>
 export default {
   computed: {
+    title: function () {
+      return 'Civic Tech Vancouver'
+    },
     menuItems: function () {
       return [
         {
