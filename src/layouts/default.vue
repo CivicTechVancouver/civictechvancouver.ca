@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app v-resize="onResize">
     <v-navigation-drawer v-model="sideNav" app right disable-resize-watcher width="250">
       <v-list>
         <v-list-tile v-for="(item, itemIdx) in menuItems" :key="itemIdx" nuxt :to="item.link">
@@ -12,7 +12,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar class="primary" dark scroll-off-screen>
+    <v-toolbar class="primary" dark scroll-off-screen fixed>
       <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title>
         <v-icon left dark>code</v-icon>
@@ -35,6 +35,8 @@
   </v-app>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   computed: {
     title: function () {
@@ -69,6 +71,21 @@ export default {
     return {
       sideNav: false
     }
+  },
+  mounted: function () {
+    this.onResize()
+  },
+  methods: {
+    onResize: function () {
+      if (process.browser) {
+        this.setWindowSize({
+          x: window.innerWidth,
+          y: window.innerHeight,
+        })
+      }
+    },
+    ...mapGetters(['getWindowSize']),
+    ...mapActions(['setWindowSize'])
   }
 }
 </script>
