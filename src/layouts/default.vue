@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="sideNav" dark app right disable-resize-watcher disable-route-watcher width="250">
+    <v-navigation-drawer v-model="sideNav" app right disable-resize-watcher width="250">
       <v-list>
-        <v-list-tile v-for="(item, itemIdx) in menuItems" :key="itemIdx">
+        <v-list-tile v-for="(item, itemIdx) in menuItems" :key="itemIdx" nuxt :to="item.link">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -25,7 +25,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat v-for="(item, itemIdx) in menuItems" :key="itemIdx">
+        <v-btn flat v-for="(item, itemIdx) in menuItems" :key="itemIdx" nuxt :to="item.link">
           <v-icon left dark>{{ item.icon }}</v-icon>
           {{ item.label }}
         </v-btn>
@@ -44,19 +44,23 @@ export default {
       return [
         {
           label: 'Home',
-          icon: 'home'
+          link: '/',
+          icon: 'home',
         },
         {
           label: 'About',
-          icon: 'face'
+          link: '/about',
+          icon: 'face',
         },
         {
           label: 'Projects',
-          icon: 'whatshot'
+          link: '/projects',
+          icon: 'whatshot',
         },
         {
           label: 'Get Involved',
-          icon: 'group_add'
+          link: '/getInvolved',
+          icon: 'group_add',
         },
       ]
     }
