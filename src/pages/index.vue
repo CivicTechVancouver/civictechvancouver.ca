@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="sideNav" absolute>
+    <v-navigation-drawer v-model="sideNav" absolute app>
       <v-list>
         <v-list-tile>
           <v-list-tile-action>
@@ -20,7 +20,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar dark class="primary">
+    <v-toolbar dark class="primary" app>
       <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -53,8 +53,4 @@ export default {
 }
 </script>
 <style>
-main {
-  height: 100%;
-  min-height: 100%;
-}
 </style>
