@@ -2,20 +2,12 @@
   <v-app>
     <v-navigation-drawer v-model="sideNav" fixed app>
       <v-list>
-        <v-list-tile>
+        <v-list-tile v-for="(item, itemIdx) in menuItems" :key="itemIdx">
           <v-list-tile-action>
-            <v-icon>home</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Home</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
+            <v-list-tile-title>{{ item.label }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -25,20 +17,46 @@
       <v-toolbar-title>Application</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn flat>
-          <v-icon left dark>home</v-icon>
-          Home
-        </v-btn>
-        <v-btn flat>
-          <v-icon left dark>contact_mail</v-icon>
-          Contact
+        <v-btn flat v-for="(item, itemIdx) in menuItems" :key="itemIdx">
+          <v-icon left dark>{{ item.icon }}</v-icon>
+          {{ item.label }}
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <nuxt/>
   </v-app>
 </template>
-
+<script>
+export default {
+  computed: {
+    menuItems: function () {
+      return [
+        {
+          label: 'Home',
+          icon: 'home'
+        },
+        {
+          label: 'About',
+          icon: 'face'
+        },
+        {
+          label: 'Projects',
+          icon: 'whatshot'
+        },
+        {
+          label: 'Get Involved',
+          icon: 'group_add'
+        },
+      ]
+    }
+  },
+  data: function () {
+    return {
+      sideNav: false
+    }
+  }
+}
+</script>
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

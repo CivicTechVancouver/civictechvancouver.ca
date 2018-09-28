@@ -6,13 +6,6 @@
 
 <script>
 export default {
-  data: () => ({
-    sideNav: null
-  }),
-
-  props: {
-    source: String
-  }
 }
 </script>
 <style>
