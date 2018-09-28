@@ -1,6 +1,12 @@
 <template>
   <div>
-    Index
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex sm10 offset-sm1>
+          Index
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 

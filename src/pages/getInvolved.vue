@@ -1,6 +1,12 @@
 <template>
   <div>
-    Get Involved
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex sm10 offset-sm1>
+          Get Involved
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
