@@ -40,6 +40,7 @@ NOTE: Meetup's API
   - Event date
   - RSVP button, or link
               </pre>
+              <meetup/>
             </v-layout>
           </v-container>
         </v-flex>
@@ -68,8 +69,10 @@ NOTE: Form
 
 <script>
 import { mapGetters } from 'vuex'
+import Meetup from '@/components/Meetup.vue'
 
 export default {
+  components: { Meetup },
   computed: {
     styleHeight: function () {
       if (!this.windowSize) return
