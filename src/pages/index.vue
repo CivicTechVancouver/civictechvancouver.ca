@@ -32,14 +32,7 @@ NOTE: Text, photo
         <v-flex sm10 offset-sm1>
           <v-container fill-height class="text-xs-center" :style="styleHeight" style="background-color: #ddd">
             <v-layout column align-center justify-center>
-              <h1 class="display-2">Next Meetup</h1>
-              <p>RSVP</p>
-              <pre>
-NOTE: Meetup's API
-  - Event title
-  - Event date
-  - RSVP button, or link
-              </pre>
+              <h1 class="display-2">Meetup</h1>
               <meetup/>
             </v-layout>
           </v-container>
