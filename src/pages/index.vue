@@ -32,14 +32,7 @@ NOTE: need contents
         </v-flex>
       </template>
     </section-default>
-    <section-default :styleHeight="styleHeight">
-      <template>
-        <v-flex sm12>
-          <h1>Meetup</h1>
-          <meetup :events="meetupEvents"/>
-        </v-flex>
-      </template>
-    </section-default>
+    <section-meetup :events="meetupEvents"/>
     <section-news-letter :styleHeight="styleHeight"/>
   </div>
 </template>
@@ -48,11 +41,11 @@ NOTE: need contents
 import { mapGetters } from 'vuex'
 import SectionDefault from '@/components/SectionDefault.vue'
 import SectionNewsLetter from '@/components/SectionNewsLetter.vue'
-import Meetup from '@/components/Meetup.vue'
+import SectionMeetup from '@/components/SectionMeetup.vue'
 import meetupEvents from '~/static/api/meetup/events.json'
 
 export default {
-  components: { Meetup, SectionDefault, SectionNewsLetter },
+  components: { SectionMeetup, SectionDefault, SectionNewsLetter },
   fetch: async function ({ store }) {
     await store.dispatch('setMeetupEvents', meetupEvents)
   },
