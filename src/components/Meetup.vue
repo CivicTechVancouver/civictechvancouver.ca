@@ -23,19 +23,21 @@
         </v-layout>
       </div>
       <div v-if="pastEvents.length > 0">
-        <v-btn large color="info" @click="showPast = !showPast">View Previous Meetups</v-btn>
-        <v-expansion-panel popout v-if="showPast">
-          <v-expansion-panel-content v-for="(past, pastIdx) in pastEvents" :key="pastIdx">
-            <div slot="header">{{ past.name }}</div>
-            <v-card>
-              <v-card-text class="pa-4">
-                <small>
-                  <div v-html="past.description"></div>
-                </small>
-              </v-card-text>
-            </v-card>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
+        <v-btn large color="info" @click="showPast = !showPast">{{ buttonLabel }}</v-btn>
+        <transition name="fade">
+          <v-expansion-panel popout v-if="showPast">
+            <v-expansion-panel-content v-for="(past, pastIdx) in pastEvents" :key="pastIdx">
+              <div slot="header">{{ past.name }}</div>
+              <v-card>
+                <v-card-text class="pa-4">
+                  <small>
+                    <div v-html="past.description"></div>
+                  </small>
+                </v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </transition>
       </div>
     </v-container>
   </div>
@@ -55,6 +57,9 @@ export default {
     }
   },
   computed: {
+    buttonLabel: function () {
+      return this.showPast ? 'Hide Past Events' : 'View Past Events'
+    },
     upcomingEvents: function () {
       const condition = function (event) {
         return event.status !== 'past'
@@ -78,4 +83,10 @@ export default {
 }
 </script>
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
