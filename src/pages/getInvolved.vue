@@ -4,7 +4,7 @@
       <template>
         <v-flex xs12 sm4>
           <v-card>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.3"/>
+            <v-img src="/img/meetup.svg" aspect-ratio="1"/>
             <v-card-title primary-title>
               Meetups
             </v-card-title>
@@ -18,7 +18,7 @@
         </v-flex>
         <v-flex xs12 sm4>
           <v-card>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.3"/>
+            <v-img src="/img/slack.svg" aspect-ratio="1"/>
             <v-card-title primary-title>
               Slack
             </v-card-title>
@@ -32,7 +32,7 @@
         </v-flex>
         <v-flex xs12 sm4>
           <v-card>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.3"/>
+            <v-img src="/img/twitter.svg" aspect-ratio="1"/>
             <v-card-title primary-title>
               Twitter
             </v-card-title>
