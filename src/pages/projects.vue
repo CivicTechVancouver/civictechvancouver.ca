@@ -3,7 +3,7 @@
     <section-default :styleHeight="styleHeight">
       <template>
         <v-flex sm10>
-          <h1 class="display-2">Project 1</h1>
+          <h1>Project 1</h1>
           <pre>
 NOTE: Need contents
           </pre>

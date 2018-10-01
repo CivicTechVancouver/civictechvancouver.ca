@@ -2,7 +2,7 @@
   <section-default :styleHeight="styleHeight">
     <template>
       <v-flex xs12 sm4>
-        <h1 class="display-2">News Letter</h1>
+        <h1>News Letter</h1>
         <ul>
           <li>Name</li>
           <li>Email Address</li>
