@@ -68,15 +68,12 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
 
 export default {
-  mounted: function () {
-    this.getAllEvents()
-  },
-  data: function () {
-    return {
-      events: []
+  props: {
+    events: {
+      type: Array,
+      required: true,
     }
   },
   computed: {
@@ -99,15 +96,6 @@ export default {
         return condition(event)
       })
     },
-    getAllEvents: async function () {
-      const res = await axios.get('/api/meetup/events.json')
-      this.events = res.data.map((event) => {
-        return {
-          dialog: false,
-          ...event
-        }
-      })
-    }
   }
 }
 </script>

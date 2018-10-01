@@ -33,7 +33,7 @@ NOTE: Text, photo
           <v-container fill-height class="text-xs-center" :style="styleHeight" style="background-color: #ddd">
             <v-layout column align-center justify-center>
               <h1 class="display-2">Meetup</h1>
-              <meetup/>
+              <meetup :events="meetupEvents"/>
             </v-layout>
           </v-container>
         </v-flex>
@@ -63,9 +63,13 @@ NOTE: Form
 <script>
 import { mapGetters } from 'vuex'
 import Meetup from '@/components/Meetup.vue'
+import meetupEvents from '~/static/api/meetup/events.json'
 
 export default {
   components: { Meetup },
+  fetch: async function ({ store }) {
+    await store.dispatch('setMeetupEvents', meetupEvents)
+  },
   computed: {
     styleHeight: function () {
       if (!this.windowSize) return
@@ -73,8 +77,11 @@ export default {
         minHeight: `${this.windowSize.y - 48}px`
       }
     },
-    ...mapGetters({ windowSize: 'getWindowSize'})
-  }
+    ...mapGetters({
+      windowSize: 'getWindowSize',
+      meetupEvents: 'getMeetupEvents',
+    })
+  },
 }
 </script>
 <style>
