@@ -23,46 +23,19 @@
         </v-layout>
       </div>
       <div v-if="pastEvents.length > 0">
-        <h2 class="text-xs-center">Previous Meetups</h2>
-        <v-layout row wrap>
-          <v-flex sm12 md6 lg4 v-for="(past, pastIdx) in pastEvents" :key="pastIdx">
+        <v-btn large color="info" @click="showPast = !showPast">View Previous Meetups</v-btn>
+        <v-expansion-panel popout v-if="showPast">
+          <v-expansion-panel-content v-for="(past, pastIdx) in pastEvents" :key="pastIdx">
+            <div slot="header">{{ past.name }}</div>
             <v-card>
-              <v-responsive aspect-ratio="2.7">
-                <v-card-title>
-                  {{ past.name }}
-                </v-card-title>
-              </v-responsive>
-              <v-card-actions>
-                <v-dialog v-model="past.dialog" width="800">
-                  <v-btn slot="activator" flat color="orange">Read More</v-btn>
-                  <v-card>
-                    <v-card-title
-                      class="headline grey lighten-2"
-                      primary-title
-                      >
-                      {{ past.name }}
-                    </v-card-title>
-                    <v-card-text>
-                      <small>
-                        <div v-html="past.description"></div>
-                      </small>
-                    </v-card-text>
-                    <v-divider></v-divider>
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn
-                        flat color="orange"
-                        @click="past.dialog = false"
-                        >
-                        Close
-                      </v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-dialog>
-              </v-card-actions>
+              <v-card-text class="pa-4">
+                <small>
+                  <div v-html="past.description"></div>
+                </small>
+              </v-card-text>
             </v-card>
-          </v-flex>
-        </v-layout>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
       </div>
     </v-container>
   </div>
@@ -74,6 +47,11 @@ export default {
     events: {
       type: Array,
       required: true,
+    }
+  },
+  data: function () {
+    return {
+      showPast: false
     }
   },
   computed: {
@@ -94,7 +72,7 @@ export default {
     filterEvents: function (condition) {
       return this.events.filter((event) => {
         return condition(event)
-      })
+      }).slice().reverse()
     },
   }
 }
