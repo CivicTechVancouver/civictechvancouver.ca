@@ -6,13 +6,13 @@
           <v-card>
             <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.3"/>
             <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">Meetups</h3>
-                <div>blah blah</div>
-              </div>
+              Meetups
             </v-card-title>
+            <v-card-text class="text-xs-left" align-top>
+              blah
+            </v-card-text>
             <v-card-actions>
-              <v-btn flat color="orange">Share</v-btn>
+              <v-btn flat color="orange" href="https://twitter.com/CivicTechYVR" target="_blank">Join</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -20,13 +20,13 @@
           <v-card>
             <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.3"/>
             <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">Slack</h3>
-                <div>blah blah</div>
-              </div>
+              Slack
             </v-card-title>
+            <v-card-text class="text-xs-left" align-top>
+              blah
+            </v-card-text>
             <v-card-actions>
-              <v-btn flat color="orange">Share</v-btn>
+              <v-btn flat color="orange" href="http://slack.civictechvancouver.ca/" target="_blank">Join</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -34,43 +34,28 @@
           <v-card>
             <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.3"/>
             <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">Twitter</h3>
-                <div>blah blah</div>
-              </div>
+              Twitter
             </v-card-title>
+            <v-card-text class="text-xs-left" align-top>
+              blah
+            </v-card-text>
             <v-card-actions>
-              <v-btn flat color="orange">Share</v-btn>
+              <v-btn flat color="orange" href="https://twitter.com/CivicTechYVR" target="_blank">Follow</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
       </template>
     </section-default>
-
-    <section-default :styleHeight="styleHeight">
-      <template>
-        <v-flex xs12 sm4>
-          <h1 class="display-2">News Letter</h1>
-          <ul>
-            <li>Name</li>
-            <li>Email Address</li>
-            <li>What industry do you work in?</li>
-            <li>Submit button</li>
-          </ul>
-          <pre>
-NOTE: Form
-          </pre>
-        </v-flex>
-      </template>
-    </section-default>
+    <section-news-letter :styleHeight="styleHeight"/>
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 import SectionDefault from '@/components/SectionDefault.vue'
+import SectionNewsLetter from '@/components/SectionNewsLetter.vue'
 
 export default {
-  components: { SectionDefault },
+  components: { SectionDefault, SectionNewsLetter },
   computed: {
     styleHeight: function () {
       if (!this.windowSize) return
