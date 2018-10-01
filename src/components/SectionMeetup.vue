@@ -15,6 +15,19 @@
         </template>
       </section-default>
     </div>
+    <div v-else class="upcoming">
+      <!-- When there's no upcoming events -->
+      <section-default :styleHeight="styleHeight">
+        <template>
+          <v-flex xs12 md10>
+            <div style="color:white;" class="text-xs-left">
+              <h1>Join our Meetup group!</h1>
+              <v-btn large color="red" dark href="https://meetup.com/Civic-Tech-Vancouver/" target="_blank">Join!</v-btn>
+            </div>
+          </v-flex>
+        </template>
+      </section-default>
+    </div>
     <div v-if="pastEvents.length > 0">
       <v-btn large color="info" @click="showPast = !showPast">{{ buttonLabel }}</v-btn>
       <transition name="fade">
