@@ -3,7 +3,16 @@
     <template>
       <v-flex xs11 sm8 md6>
         <h1>News Letter</h1>
-        <v-form v-model="valid" ref="form">
+        <v-card v-if="hasSubmitted">
+          <v-card-media>
+            <iframe src="https://giphy.com/embed/26gsjCZpPolPr3sBy" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          </v-card-media>
+          <v-card-text>
+            <!-- TODO: Message -->
+            Thank you!
+          </v-card-text>
+        </v-card>
+        <v-form v-model="valid" ref="form" v-if="!hasSubmitted">
           <v-text-field v-model="name"
             :rules="nameRules"
             :counter="nameMaxLength"
@@ -41,6 +50,7 @@ export default {
   data: function () {
     return {
       valid: false,
+      hasSubmitted: false,
       email: '',
       name: '',
       industry: '',
@@ -69,6 +79,7 @@ export default {
             "industry": this.industry,
           }
         )
+        this.hasSubmitted = true
       }
     },
     clear: function () {
