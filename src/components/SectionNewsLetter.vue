@@ -4,9 +4,9 @@
       <v-flex xs11 sm8 md6>
         <h1>News Letter</h1>
         <v-card v-if="hasSubmitted">
-          <v-card-media>
+          <v-responsive>
             <iframe src="https://giphy.com/embed/26gsjCZpPolPr3sBy" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-          </v-card-media>
+          </v-responsive>
           <v-card-text>
             <!-- TODO: Message -->
             Thank you!
