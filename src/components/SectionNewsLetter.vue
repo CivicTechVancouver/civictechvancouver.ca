@@ -39,9 +39,14 @@
 </template>
 <script>
 import SectionDefault from '@/components/SectionDefault.vue'
+import { db } from '~/plugins/firebase.js'
+import { mapActions } from 'vuex'
 
 export default {
   components: { SectionDefault },
+  created: function () {
+    this.$store.dispatch('setUsersRef', db.collection('users'))
+  },
   props: {
     styleHeight: {
       type: Object,
@@ -72,13 +77,15 @@ export default {
   methods: {
     submit: function () {
       if (this.$refs.form.validate()) {
-        console.log(
-          {
-            "name": this.name,
-            "email": this.email,
-            "industry": this.industry,
-          }
-        )
+        const user = {
+          "name": this.name,
+          "email": this.email,
+          "industry": this.industry,
+          "subscribeStarted": new Date(),
+        }
+        const usersRef = db.collection('users')
+        usersRef.add(user)
+        this.clear()
         this.hasSubmitted = true
       }
     },

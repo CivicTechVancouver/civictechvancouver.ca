@@ -18,6 +18,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  plugins: ['~/plugins/firebase'],
   modules: [
     '@nuxtjs/vuetify'
   ],
@@ -38,7 +39,7 @@ module.exports = {
   buildDir: process.env.DEV ? '.nuxt' : '../functions/nuxt',
   build: {
     publicPath: process.env.DEV ? '/public/' : '/',
-    vendor: ['axios', 'babel-polyfill'],
+    vendor: ['axios', 'babel-polyfill', 'vuexfire'],
     extractCSS: true,
     babel: {
       presets: [
