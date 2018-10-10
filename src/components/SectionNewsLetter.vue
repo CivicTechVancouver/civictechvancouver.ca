@@ -43,9 +43,6 @@ import { db } from '~/plugins/firebase.js'
 
 export default {
   components: { SectionDefault },
-  created: function () {
-    this.$store.dispatch('setUsersRef', db.collection('users'))
-  },
   props: {
     styleHeight: {
       type: Object,
