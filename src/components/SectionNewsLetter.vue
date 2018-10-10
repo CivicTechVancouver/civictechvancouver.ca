@@ -56,7 +56,7 @@ export default {
       name: '',
       industry: '',
       nameMaxLength: 20,
-      industryMaxLength: 20,
+      industryMaxLength: 30,
       industryRules: [
         v => ((v && v.length <= this.industryMaxLength) || !v) || ` must be less than ${this.industryMaxLength} characters`
       ],
