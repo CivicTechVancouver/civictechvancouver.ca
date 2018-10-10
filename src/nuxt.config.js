@@ -39,7 +39,7 @@ module.exports = {
   buildDir: process.env.DEV ? '.nuxt' : '../functions/nuxt',
   build: {
     publicPath: process.env.DEV ? '/public/' : '/',
-    vendor: ['axios', 'babel-polyfill', 'vuexfire'],
+    vendor: ['axios', 'babel-polyfill'],
     extractCSS: true,
     babel: {
       presets: [
