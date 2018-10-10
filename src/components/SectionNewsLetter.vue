@@ -40,7 +40,6 @@
 <script>
 import SectionDefault from '@/components/SectionDefault.vue'
 import { db } from '~/plugins/firebase.js'
-import { mapActions } from 'vuex'
 
 export default {
   components: { SectionDefault },
