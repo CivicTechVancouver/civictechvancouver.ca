@@ -36,7 +36,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  buildDir: process.env.DEV ? '.nuxt' : '../functions/nuxt',
+  buildDir: '.nuxt',
   build: {
     publicPath: process.env.DEV ? '/public/' : '/',
     vendor: ['babel-polyfill', 'vuexfire'],
