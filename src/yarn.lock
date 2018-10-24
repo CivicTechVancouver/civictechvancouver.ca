@@ -189,10 +189,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.10.tgz#ab43b78da70dfd4d780becb3ae47213d6bd00762"
 
 "@nuxtjs/vuetify@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-0.4.2.tgz#91da4cc25457349f0013492d374329a7800ddf69"
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-0.4.3.tgz#12427ad564be5ab652a0f10ff61bf48bdc0a9d06"
   dependencies:
-    vuetify "^1.0.17"
+    vuetify "^1.2.5"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -447,13 +447,6 @@ autoprefixer@^7.1.1, autoprefixer@^7.2.5:
     num2fraction "^1.2.2"
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
-
-axios@^0.18.0:
-  version "0.18.0"
-  resolved "http://registry.npmjs.org/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
-  dependencies:
-    follow-redirects "^1.3.0"
-    is-buffer "^1.1.5"
 
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -2038,12 +2031,6 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-debug@=3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  dependencies:
-    ms "2.0.0"
-
 debug@^3.1.0:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.5.tgz#c2418fbfd7a29f4d4f70ff4cea604d4b64c46407"
@@ -2769,12 +2756,6 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
-
-follow-redirects@^1.3.0:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.8.tgz#1dbfe13e45ad969f813e86c00e5296f525c885a1"
-  dependencies:
-    debug "=3.1.0"
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -6152,9 +6133,6 @@ uuid@^3.1.0:
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
-  dependencies:
-    spdx-correct "^3.0.0"
-    spdx-expression-parse "^3.0.0"
 
 vary@~1.1.2:
   version "1.1.2"
@@ -6254,9 +6232,9 @@ vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
-vuetify@^1.0.17:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.5.tgz#91578367709b20e406f2cdc7a164dfd70df954d9"
+vuetify@^1.2.5:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.3.2.tgz#5dbb560e03d46914f27ffe11bb52dd97882bd996"
 
 vuex@^3.0.1:
   version "3.0.1"
