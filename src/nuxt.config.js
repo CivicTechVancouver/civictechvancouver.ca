@@ -16,7 +16,11 @@ module.exports = {
   },
   plugins: ['~/plugins/firebase'],
   modules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    [
+      '@nuxtjs/google-analytics',
+      { id: 'UA-59923195-5' }
+    ]
   ],
   vuetify: {
     theme: {
