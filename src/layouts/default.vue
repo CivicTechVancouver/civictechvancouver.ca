@@ -13,7 +13,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar class="primary" dark scroll-off-screen fixed>
-      <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title>
         <v-icon left dark>code</v-icon>
         <span class="hidden-md-and-up">
