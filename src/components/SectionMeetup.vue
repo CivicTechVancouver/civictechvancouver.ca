@@ -7,7 +7,7 @@
             <div style="color:white;" class="text-xs-left">
               <p>Next Meetup:</p>
               <p><v-icon dark>calendar_today</v-icon> {{ upcoming.local_date }} {{ upcoming.local_time }}</p>
-              <h1>{{ upcoming.name }}</h1>
+              <h2 class="display-2 font-weight-bold">{{ upcoming.name }}</h2>
               <v-btn large color="red" dark :href="upcoming.link" target="_blank">RSVP</v-btn>
               <v-icon dark>people</v-icon> {{ upcoming.yes_rsvp_count }} {{ upcoming.group.who }} going
             </div>
@@ -21,7 +21,7 @@
         <template>
           <v-flex xs12 md10>
             <div style="color:white;" class="text-xs-left">
-              <h1>Join our Meetup group!</h1>
+              <h2 class="display-3 font-weight-bold">Join our Meetup group!</h2>
               <v-btn large color="red" dark href="https://meetup.com/Civic-Tech-Vancouver/" target="_blank">Join!</v-btn>
             </div>
           </v-flex>

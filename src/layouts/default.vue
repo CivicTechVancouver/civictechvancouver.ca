@@ -54,11 +54,11 @@ export default {
           link: '/about',
           icon: 'face',
         },
-        {
-          label: 'Projects',
-          link: '/projects',
-          icon: 'whatshot',
-        },
+        // {
+        //   label: 'Projects',
+        //   link: '/projects',
+        //   icon: 'whatshot',
+        // },
         {
           label: 'Get Involved',
           link: '/getInvolved',

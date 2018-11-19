@@ -2,14 +2,16 @@
   <section-default :styleHeight="styleHeight">
     <template>
       <v-flex xs11 sm8 md6>
-        <h1>News Letter</h1>
+        <h2 class="display-3 font-weight-bold">News Letter</h2>
+        <div class="py-4">
+          <p>Get in touch</p>
+        </div>
         <v-card v-if="hasSubmitted">
           <v-responsive>
             <iframe src="https://giphy.com/embed/26gsjCZpPolPr3sBy" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
           </v-responsive>
           <v-card-text>
-            <!-- TODO: Message -->
-            Thank you!
+            <p>Thank you! We look forward to connecting with you</p>
           </v-card-text>
         </v-card>
         <v-form v-model="valid" ref="form" v-if="!hasSubmitted">
