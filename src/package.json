@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "fetchMeetup": "curl -o static/api/meetup/events.json \"http://api.meetup.com/Civic-Tech-Vancouver/events?status=past,upcoming&page=20\"",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

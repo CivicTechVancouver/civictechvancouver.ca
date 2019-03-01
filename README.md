@@ -26,3 +26,14 @@
 
 ## Base Repository
 This project is based on this repository: https://github.com/wataruoguchi/nuxtjs-firebase-example
+
+
+## Fetching meetup events
+```
+$ cd src && yarn fetchMeetup
+```
+
+## Build & deploy process
+```
+$ cd src && yarn build && cd .. && yarn deploy
+```
