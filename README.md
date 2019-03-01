@@ -5,35 +5,32 @@
 - JavaScript (ES6+)
 - Nuxt.js (Vue.js SSR framework)
 - Vuetify.js (Vue.js UI framework)
-- Babel
-- ESLint
-- Webpack
-- yarn
+- [Babel](https://babeljs.io/)
+- [ESLint](https://eslint.org/)
+- [Webpack](https://webpack.js.org/)
+- [yarn](https://yarnpkg.com/)
 
 ### Backend
-- Firebase
+- [Firebase](https://firebase.google.com/)
   - Cloud Functions
   - Housing
 
 ## Design
 - Material design base
 
-## Edit/Communication Tools
-- Github
-- Vim
-- Slack
-- Google Docs
+## Communication Tools
+- [#website on Slack](http://slack.civictechvancouver.ca/)
+- [through issues on GitHub](https://github.com/CivicTechVancouver/civictechvancouver.ca/issues)
 
 ## Base Repository
 This project is based on this repository: https://github.com/wataruoguchi/nuxtjs-firebase-example
 
-
 ## Fetching meetup events
-```
-$ cd src && yarn fetchMeetup
+```bash
+cd src && yarn fetchMeetup
 ```
 
 ## Build & deploy process
-```
-$ cd src && yarn build && cd .. && yarn deploy
+```bash
+cd src && yarn build && cd .. && yarn deploy
 ```
