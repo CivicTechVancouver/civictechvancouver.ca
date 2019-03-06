@@ -50,7 +50,7 @@
               Slack
             </v-card-title>
             <v-card-actions>
-              <v-btn flat color="orange" href="https://slack.civictechvancouver.ca/" target="_blank">Join</v-btn>
+              <v-btn flat color="orange" href="http://slack.civictechvancouver.ca/" target="_blank">Join</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
