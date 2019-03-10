@@ -42,12 +42,12 @@ NOTE: Need image
 <script>
 import { mapGetters } from 'vuex'
 import SectionDefault from '@/components/SectionDefault.vue'
-import SectionNewsLetter from '@/components/SectionNewsLetter.vue'
+import SectionNewsletter from '@/components/SectionNewsletter.vue'
 import SectionMeetup from '@/components/SectionMeetup.vue'
 import meetupEvents from '~/static/api/meetup/events.json'
 
 export default {
-  components: { SectionMeetup, SectionDefault, SectionNewsLetter },
+  components: { SectionMeetup, SectionDefault, SectionNewsletter },
   fetch: async function ({ store }) {
     await store.dispatch('setMeetupEvents', meetupEvents)
   },
