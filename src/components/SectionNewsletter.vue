@@ -2,7 +2,7 @@
   <section-default :styleHeight="styleHeight">
     <template>
       <v-flex xs11 sm8 md6>
-        <h2 class="display-3 font-weight-bold">News Letter</h2>
+        <h2 class="display-3 font-weight-bold">Newsletter</h2>
         <div class="py-4">
           <p>Get in touch</p>
         </div>

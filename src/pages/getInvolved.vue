@@ -73,10 +73,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import SectionDefault from '@/components/SectionDefault.vue'
-import SectionNewsLetter from '@/components/SectionNewsLetter.vue'
+import SectionNewsletter from '@/components/SectionNewsletter.vue'
 
 export default {
-  components: { SectionDefault, SectionNewsLetter },
+  components: { SectionDefault, SectionNewsletter },
   computed: {
     styleHeight: function () {
       if (!this.windowSize) return
